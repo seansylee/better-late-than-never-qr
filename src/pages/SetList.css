@@ -1,0 +1,224 @@
+/* Color palette */
+:root {
+  --red:    #E62229;
+  --teal:   #1BA8C4;
+  --green:  #3BB844;
+  --orange: #F05A28;
+  --badge:  #CC2229;
+}
+
+.setlist-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #fff;
+}
+
+/* ── Header / Backdrop ── */
+.header {
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.backdrop-img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+.logo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.lotg-logo {
+  font-family: 'Lilita One', sans-serif;
+  font-size: 82px;
+  line-height: 0.92;
+  letter-spacing: -3px;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
+}
+
+.letter-l { color: var(--red); }
+.letter-o { color: var(--teal); }
+.letter-t { color: var(--green); }
+.letter-g { color: var(--orange); }
+
+.logo-underline {
+  display: flex;
+  width: 210px;
+  height: 5px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 3px;
+}
+.ul-r { flex: 1; background: var(--red); }
+.ul-b { flex: 1; background: var(--teal); }
+.ul-g { flex: 1; background: var(--green); }
+
+.band-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: #1565C0;
+  margin-top: 5px;
+  text-shadow: 0 1px 4px rgba(255,255,255,0.8);
+}
+
+/* ── Concert section ── */
+.concert-section {
+  padding: 16px 18px 0;
+  flex: 1;
+}
+
+.concert-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: #111;
+  text-align: center;
+  letter-spacing: 1.5px;
+  line-height: 1;
+}
+
+.concert-date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 5px 0 14px;
+}
+
+.date-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  color: #1565C0;
+  letter-spacing: 2px;
+}
+
+.date-star {
+  font-size: 13px;
+}
+.red-star  { color: var(--red); }
+.blue-star { color: var(--teal); }
+
+/* ── Setlist grid ── */
+.setlist-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 10px;
+  margin-bottom: 18px;
+  border-top: 1.5px solid #e0e0e0;
+  border-bottom: 1.5px solid #e0e0e0;
+  padding: 10px 0;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.song-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 0.12s;
+}
+
+.song-item:active {
+  opacity: 0.55;
+}
+
+.song-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--badge);
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  min-width: 26px;
+  padding: 3px 4px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  letter-spacing: 0.3px;
+}
+
+.song-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #111;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+/* ── Band members ── */
+.band-members {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 0 8px;
+}
+
+.member {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.member-r { color: var(--red); }
+.member-b { color: var(--teal); }
+.member-g { color: var(--green); }
+.member-o { color: var(--orange); }
+
+.member-star {
+  color: #bbb;
+  font-size: 9px;
+  margin-bottom: 2px;
+}
+
+/* ── Footer ── */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 20px;
+  border-top: 1.5px solid #e0e0e0;
+}
+
+.footer-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.footer-stars {
+  display: flex;
+  gap: 4px;
+  font-size: 12px;
+}
+
+.fs-r { color: var(--red); }
+.fs-b { color: var(--teal); }
+.fs-g { color: var(--green); }
+.fs-o { color: var(--orange); }
