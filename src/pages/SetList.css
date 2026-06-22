@@ -22,9 +22,20 @@
   overflow: hidden;
 }
 
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to bottom, transparent 0%, #fff 100%);
+  pointer-events: none;
+}
+
 .backdrop-img {
   width: 100%;
-  height: 230px;
+  height: 420px;
   object-fit: cover;
   object-position: center 30%;
   display: block;
