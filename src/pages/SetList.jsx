@@ -11,18 +11,7 @@ export default function SetList() {
       <div className="header">
         <img src="/backdrop.png" alt="Love Of The Game band rehearsal" className="backdrop-img" />
         <div className="logo-container">
-          <div className="lotg-logo">
-            <span className="letter-l">L</span>
-            <span className="letter-o">O</span>
-            <span className="letter-t">T</span>
-            <span className="letter-g">G</span>
-          </div>
-          <div className="logo-underline">
-            <span className="ul-r" />
-            <span className="ul-b" />
-            <span className="ul-g" />
-          </div>
-          <div className="band-name">LOVE OF THE GAME</div>
+          <img src="/logo.png" alt="Love Of The Game" className="lotg-logo-img" />
         </div>
       </div>
 
