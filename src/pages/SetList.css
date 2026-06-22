@@ -96,60 +96,56 @@
 .red-star  { color: var(--red); }
 .blue-star { color: var(--teal); }
 
-/* ── Setlist grid ── */
-.setlist-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 10px;
+/* ── Setlist (single-column track list) ── */
+.setlist {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 18px;
   border-top: 1.5px solid #e0e0e0;
   border-bottom: 1.5px solid #e0e0e0;
-  padding: 10px 0;
-}
-
-.col {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
+  padding: 6px 0;
 }
 
 .song-item {
   display: flex;
-  align-items: center;
-  gap: 7px;
+  align-items: baseline;
+  gap: 12px;
+  padding: 9px 6px;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
-  transition: opacity 0.12s;
+  transition: opacity 0.12s, background 0.12s;
+}
+
+.song-item:not(:last-child) {
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .song-item:active {
   opacity: 0.55;
+  background: #fafafa;
 }
 
 .song-num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--badge);
-  color: #fff;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 11px;
-  min-width: 26px;
-  padding: 3px 4px;
-  border-radius: 3px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  min-width: 34px;
   flex-shrink: 0;
-  letter-spacing: 0.3px;
+  line-height: 1;
 }
 
+.num-r { color: var(--red); }
+.num-b { color: var(--teal); }
+.num-g { color: var(--green); }
+.num-o { color: var(--orange); }
+
 .song-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  color: #111;
-  letter-spacing: 0.4px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  color: #1a2236;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
-  line-height: 1.15;
+  line-height: 1.05;
 }
 
 /* ── Band members ── */

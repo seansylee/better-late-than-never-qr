@@ -2,10 +2,9 @@ import { Link } from 'react-router-dom'
 import { songs } from '../data/songs'
 import './SetList.css'
 
-export default function SetList() {
-  const leftCol = songs.slice(0, 6)
-  const rightCol = songs.slice(6, 12)
+const NUM_COLORS = ['num-r', 'num-b', 'num-g', 'num-o']
 
+export default function SetList() {
   return (
     <div className="setlist-page">
       <div className="header">
@@ -23,23 +22,15 @@ export default function SetList() {
           <span className="date-star blue-star">★</span>
         </div>
 
-        <div className="setlist-grid">
-          <div className="col">
-            {leftCol.map(song => (
-              <Link to={`/lyrics/${song.id}`} key={song.id} className="song-item">
-                <span className="song-num">{song.number}</span>
-                <span className="song-title">{song.title}</span>
-              </Link>
-            ))}
-          </div>
-          <div className="col">
-            {rightCol.map(song => (
-              <Link to={`/lyrics/${song.id}`} key={song.id} className="song-item">
-                <span className="song-num">{song.number}</span>
-                <span className="song-title">{song.title}</span>
-              </Link>
-            ))}
-          </div>
+        <div className="setlist">
+          {songs.map((song, i) => (
+            <Link to={`/lyrics/${song.id}`} key={song.id} className="song-item">
+              <span className={`song-num ${NUM_COLORS[i % NUM_COLORS.length]}`}>
+                {song.number}.
+              </span>
+              <span className="song-title">{song.title}</span>
+            </Link>
+          ))}
         </div>
 
         <div className="band-members">
