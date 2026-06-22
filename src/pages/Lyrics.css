@@ -48,16 +48,11 @@
 }
 
 /* small LOTG logo in header */
-.lotg-small {
-  font-family: 'Lilita One', sans-serif;
-  font-size: 30px;
-  letter-spacing: -1.5px;
-  line-height: 1;
+.lotg-small-img {
+  height: 38px;
+  width: auto;
+  display: block;
 }
-.ls-l { color: var(--red); }
-.ls-o { color: var(--teal); }
-.ls-t { color: var(--green); }
-.ls-g { color: var(--orange); }
 
 /* ── Lyrics content ── */
 .lyrics-content {

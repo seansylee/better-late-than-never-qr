@@ -41,12 +41,7 @@ export default function Lyrics() {
           <span className="back-arrow">←</span>
           <span className="back-text">SET LIST</span>
         </Link>
-        <div className="lotg-small">
-          <span className="ls-l">L</span>
-          <span className="ls-o">O</span>
-          <span className="ls-t">T</span>
-          <span className="ls-g">G</span>
-        </div>
+        <img src="/logo.png" alt="Love Of The Game" className="lotg-small-img" />
       </div>
 
       <div className="lyrics-content">
